@@ -1,3 +1,3 @@
 # Logica-de-Programacao
 
-Um breve conteúdo de uma das cadeiras que aprendi na faculdade.
+Uma breve demonstração de um dos conteúdos que aprendi na faculdade.
