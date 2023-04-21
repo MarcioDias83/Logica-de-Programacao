@@ -1,19 +1,11 @@
-// Crie um programa em C que leia a altura e o sexo de 20 alunos (1- Masc. 2-Fem.) e informe :
-// a) Número de alunos
-// b) Número de alunas
-// c) Média de altura dos alunos
-// d) Média de altura das alunas
-
 #include<stdio.h>
 #include<stdlib.h>
-#include <locale.h>
 
 int altura, sexo, numAlunos, numAlunas, soma, contador, contAlunos, contAlunas;
 float mediaAlturaAlunos, mediaAlturaAlunas;
 
 int main(){
 	
-	setlocale(LC_ALL, "Portuguese");
 	while (contador <= 5){
 	printf("Digite o seu sexo: 1 - Masculino, 2 - Feminino\n");
 	scanf("%d",&sexo);
@@ -33,8 +25,8 @@ int main(){
 			soma = soma + altura;
 			mediaAlturaAlunas = soma / contador;break;
 			
-		default: printf("Escolha uma das opções!\n\n");
+		default: printf("Escolha uma das opcoes!\n\n");
 		}
 	}	
-	printf("\nNessa turma existem %d alunos e %d alunas, sendo que a média da altura dos alunos é de %.1f e das alunas é de %.1f.", contAlunos, contAlunas, mediaAlturaAlunos, mediaAlturaAlunas);
+	printf("\nNessa turma existem %d alunos e %d alunas, sendo que a media da altura dos alunos eh de %.1f e das alunas eh de %.1f.", contAlunos, contAlunas, mediaAlturaAlunos, mediaAlturaAlunas);
 }
