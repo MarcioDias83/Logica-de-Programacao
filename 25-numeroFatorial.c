@@ -1,17 +1,14 @@
-// Crie um programa em C que leia um número inteiro e imprima o fatorial desse número.
+// Crie um programa em C que leia um nÃºmero inteiro e imprima o fatorial desse nÃºmero.
 // Ex.: fatorial de 5 = 5*4*3*2*1, ou seja 120
 
 #include<stdio.h>
 #include<stdlib.h>
-#include<locale.h>
 
 int main(){
 	
-	setlocale(LC_ALL, "Portuguese");
-	
 	int numero, fatorial;
 	
-	printf("Digite um numero!\n");
+	printf("Digite um numero:\n");
 	scanf("%d",&numero);
 	fatorial = 1;
 	
