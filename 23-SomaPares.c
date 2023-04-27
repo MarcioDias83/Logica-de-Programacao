@@ -14,9 +14,6 @@ int main ()
 
 	while(numero1 < numero2)
 	{
-		if(numero1 < 0 || numero2 < 0){
-			printf("Use somente numeros positivos!");break;
-		}
 	soma = soma + numero1;
 	numero1 = numero1 + 2;
 	}
