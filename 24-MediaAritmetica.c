@@ -1,30 +1,27 @@
-// Crie um programa em C que leia dois números pares positivos e imprima a média aritmética de todos os pares entre eles.
+// Crie um programa em C que leia dois nÃºmeros pares positivos e imprima a mÃ©dia aritmÃ©tica de todos os pares entre eles.
 
 #include <stdio.h>
 #include <stdlib.h>
-#include <locale.h>
-  
+
 int main () 
 {
-	setlocale(LC_ALL, "Portuguese");
-	
-	int numero1, numero2, soma = 0, contador, media;
+	int numero1, numero2, soma = 0, cont=0, media;
   
-	printf ("Qual é o primeiro número?\n");
+	printf ("Qual e o primeiro numero?\n");
 	scanf ("%d", &numero1);
-	printf ("\nQual é o segundo número?\n");
+	printf ("Qual e o segundo numero?\n");
 	scanf ("%d", &numero2);
 
-	while(numero1 <= numero2)
-	{
-		if(numero1 < 0 || numero2 < 0){
-			printf("Use somente números positivos!");break;
-		}
-	soma = soma + numero1;
-	numero1 = numero1 + 2;
-	contador = contador + 1;
-	}
-	media = soma / contador;
-	printf("\nA média de todos os pares entre primeiro e o segundo número é %d.", media);
+    // incrementa o primeiro nÃºmero em 2
+    numero1 += 2;
+
+    // soma todos os nÃºmeros pares entre os dois nÃºmeros informados
+    while(numero1 < numero2) {
+        soma += numero1;
+        numero1 += 2;
+        cont++;
+    }
+    media = soma/cont;
+	printf("\nA media de todos os pares entre primeiro e o segundo numero e %d.", media);
 }
 
