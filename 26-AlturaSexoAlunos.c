@@ -1,3 +1,9 @@
+//Crie um programa em C que leia a altura e o sexo de 20 alunos (1- Masc. 2-Fem.) e informe :
+//a) Número de alunos
+//b) Número de alunas
+//c) Média de altura dos alunos
+//d) Média de altura das alunas
+
 #include<stdio.h>
 #include<stdlib.h>
 
