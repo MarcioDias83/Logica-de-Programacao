@@ -1,35 +1,29 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <locale.h>
 
-// Marcio Dias e Andreina Paula
-
-/* Uma rede de Pet Shop está fazendo um levantamento junto a moradores de um determinado bairro de Porto Alegre que possuem animais de estimação sobre seus custos mensais com seu bichinho.
-Para isso contratou você para desenvolver um aplicativo que faça o cadastro dessas informações e depois imprima uma série de resultados. O número de entrevistados que deverão responder a
-enquete é de 200.
-O aplicativo perguntará o
-- Tipo de animal : (1- Cão Pequeno, 2- Cão Grande, 3- Gato, 4- Roedor);
+/* Uma rede de Pet Shop esta fazendo um levantamento junto a moradores de um determinado bairro de Porto Alegre que possuem animais de estimacao sobre seus custos mensais com seu bichinho.
+Para isso contratou voce para desenvolver um aplicativo que faca o cadastro dessas informacoes e depois imprima uma serie de resultados. O numero de entrevistados que deverao responder a
+enquete e de 200.
+O aplicativo perguntar? o
+- Tipo de animal : (1- Cao Pequeno, 2- Cao Grande, 3- Gato, 4- Roedor);
 - Idade aproximada;
-- Gasto Mensal com Alimentação;
+- Gasto Mensal com Alimentacao;
 - Gasto Mensal com higiene (Banho e Tosa);
-Armazene essas informações em vetores, onde o primeiro animal cadastrado terá suas informações armazenadas no índice 0 (zero) de cada um dos vetores, o segundo animal terá suas informações
-cadastradas no índice 1... e assim sucessivamente.
-O programa deverá:
-a) Fazer a validação de dados no campo Tipo de Animal, impedindo que sejam aceitos valores diferentes de 1, 2, 3 ou 4 ; (0,6 pt)
-b) Mostrar a contagem do número de Cães Pequenos e Gatos (separadamente); (0,6 pt)
-c) Mostrar a média de idade de todos os Cães(todos) (0,6 pt)
-d) Guardar em outro vetor somente os Gastos Mensais de Roedores com Alimentação; (0,6 pt)
+Armazene essas informacoes em vetores, onde o primeiro animal cadastrado tera suas informacoes armazenadas no indice 0 (zero) de cada um dos vetores, o segundo animal tera suas informacoes
+cadastradas no indice 1... e assim sucessivamente.
+O programa devera:
+a) Fazer a validacao de dados no campo Tipo de Animal, impedindo que sejam aceitos valores diferentes de 1, 2, 3 ou 4 ; (0,6 pt)
+b) Mostrar a contagem do numero de Caes Pequenos e Gatos (separadamente); (0,6 pt)
+c) Mostrar a media de idade de todos os Caes(todos) (0,6 pt)
+d) Guardar em outro vetor somente os Gastos Mensais de Roedores com Alimentacao; (0,6 pt)
 e) Mostrar o maior e menor valor com Higiene (Geral) (0,6 pt)*/
 
 int main()
 {
-
-	setlocale(LC_ALL, "Portuguese");
-
 	int entrevistados, contador = 1, TipoAnimal, CaoPequeno = 0, CaoGrande, Gato = 0, Roedor;
 	float idade, GastoAlimentacao, GastoHigiene, MedIdadeCaes, MaiorValor = 0, vetor[entrevistados], MenorValor = 9999, SomaTotal, SomaCP, SomaCG;
 
-	printf("Quantas pessoas serão entrevistadas? (Ex.: 200)\n"); // Essa parte do código foi feita para simplificar os testes.
+	printf("Quantas pessoas serao entrevistadas? (Ex.: 200)\n"); // Essa parte do codigo foi feita para simplificar os testes.
 	scanf("%d", &entrevistados);
 	system("cls");
 
@@ -39,9 +33,9 @@ int main()
 		do
 		{
 			printf("Entrevistado %d de %d.\n\n", contador, entrevistados);
-			printf("Qual é o tipo de PET?\n");
-			printf("1 - Cão Pequeno\n");
-			printf("2 - Cão Grande\n");
+			printf("Qual e o tipo de PET?\n");
+			printf("1 - Cao Pequeno\n");
+			printf("2 - Cao Grande\n");
 			printf("3 - Gato\n");
 			printf("4 - Roedor\n\n");
 			scanf("%d", &TipoAnimal);
@@ -62,17 +56,17 @@ int main()
 				Roedor++;
 				break;
 			default:
-				printf("Opção inválida. Digite uma opção válida!\n\n");
+				printf("Opcao invalida. Digite uma opcao valida!\n\n");
 			}
 		} while (TipoAnimal < 0 || TipoAnimal > 4);
 
 		printf("Entrevistado %d de %d.\n\n", contador, entrevistados);
-		printf("Qual é a idade aproximada do PET?\n");
+		printf("Qual e a idade aproximada do PET?\n");
 		scanf("%f", &idade);
 		system("cls");
 
 		printf("Entrevistado %d de %d.\n\n", contador, entrevistados);
-		printf("Qual é o seu gasto mensal com alimentação?\nR$ ");
+		printf("Qual e o seu gasto mensal com alimentacao?\nR$ ");
 		scanf("%f", &GastoAlimentacao);
 		if (TipoAnimal == 4)
 		{
@@ -81,7 +75,7 @@ int main()
 		system("cls");
 
 		printf("Entrevistado %d de %d.\n\n", contador, entrevistados);
-		printf("Qual é o seu gasto mensal com higiene? (Banho e tosa)\nR$ ");
+		printf("Qual e o seu gasto mensal com higiene? (Banho e tosa)\nR$ ");
 		scanf("%f", &GastoHigiene);
 		system("cls");
 
@@ -107,8 +101,8 @@ int main()
 		MedIdadeCaes = SomaTotal / entrevistados;
 		contador++;
 	}
-	printf("A quantidade de cães pequenos é de %d e de gatos é de %d.\n", CaoPequeno, Gato);
-	printf("A média de idade de todos os cães é de %.1f anos.\n", MedIdadeCaes);
-	printf("O valor da quantidade de gastos mensais com alimentação de todos os roedores é de R$ %.2f.\n", vetor[entrevistados]);
+	printf("A quantidade de caes pequenos e de %d e de gatos e de %d.\n", CaoPequeno, Gato);
+	printf("A media de idade de todos os caes e de %.1f anos.\n", MedIdadeCaes);
+	printf("O valor da quantidade de gastos mensais com alimentacao de todos os roedores e de R$ %.2f.\n", vetor[entrevistados]);
 	printf("O maior valor gasto com higiene foi de R$ %.2f e o menor valor foi de R$ %.2f.\n", MaiorValor, MenorValor);
 }
