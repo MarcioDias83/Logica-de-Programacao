@@ -7,13 +7,15 @@
 #include<stdio.h>
 #include<stdlib.h>
 
-int altura, sexo, numAlunos, numAlunas, soma, contador, contAlunos, contAlunas;
+int altura, sexo, soma, contador, contAlunos, contAlunas;
 float mediaAlturaAlunos, mediaAlturaAlunas;
 
 int main(){
 	
 	while (contador <= 5){
-	printf("Digite o seu sexo: 1 - Masculino, 2 - Feminino\n");
+	printf("Digite o seu sexo:\n");
+	printf("1 - Masculino\n");
+	printf("2 - Feminino\n");
 	scanf("%d",&sexo);
 	contador += 1;
 	switch(sexo){
