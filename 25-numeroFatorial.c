@@ -1,21 +1,17 @@
-// Crie um programa em C que leia um número inteiro e imprima o fatorial desse número.
-// Ex.: fatorial de 5 = 5*4*3*2*1, ou seja 120
-
 #include<stdio.h>
 #include<stdlib.h>
 
 int main(){
 	
-	int numero, fatorial;
+	int num, fat=1;
 	
 	printf("Digite um numero:\n");
-	scanf("%d",&numero);
-	fatorial = 1;
+	scanf("%d",&num);
 	
-	while(numero > 1){
-		
-		fatorial = fatorial * numero;
-		numero -= 1; 
+	while(num>1)//Enquanto o número digitado for maior que 1...
+	{
+		fat*=num;//Fatorial recebe o fatorial * o número digitado
+		num-=1; //Número recebe -1 a cada termino de laço
 }
-	printf("\nO fatorial desse numero e %d.",fatorial);
+printf("O fatorial e: %d.", fat);
 }
