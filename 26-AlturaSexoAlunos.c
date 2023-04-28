@@ -4,37 +4,34 @@
 //c) Média de altura dos alunos
 //d) Média de altura das alunas
 
-#include<stdio.h>
-#include<stdlib.h>
+#include <stdio.h>
 
-int altura, sexo, soma, contador, contAlunos, contAlunas;
-float mediaAlturaAlunos, mediaAlturaAlunas;
+int main() {
+    int i = 1, sexo, num_alunos = 0, num_alunas = 0;
+    float altura, media_altura_alunos = 0.0, media_altura_alunas = 0.0;
 
-int main(){
-	
-	while (contador <= 5){
-	printf("Digite o seu sexo:\n");
-	printf("1 - Masculino\n");
-	printf("2 - Feminino\n");
-	scanf("%d",&sexo);
-	contador += 1;
-	switch(sexo){
-		case 1: sexo = 1;
-			printf("Digite a sua altura em cm:\n");
-			scanf("%d",&altura);
-			contAlunos +=1;
-			soma = soma + altura;
-			mediaAlturaAlunos = soma / contador;break;
-	
-		case 2: sexo = 2;
-			printf("Digite a sua altura em cm:\n");
-			scanf("%d",&altura);
-			contAlunas += 1;
-			soma = soma + altura;
-			mediaAlturaAlunas = soma / contador;break;
-			
-		default: printf("Escolha uma das opcoes!\n\n");
-		}
-	}	
-	printf("\nNessa turma existem %d alunos e %d alunas, sendo que a media da altura dos alunos eh de %.1f e das alunas eh de %.1f.", contAlunos, contAlunas, mediaAlturaAlunos, mediaAlturaAlunas);
+    while (i <= 20) {
+        printf("Digite a altura (em metros) e o sexo (1-Masc. 2-Fem.) do aluno %d: ", i);
+        scanf("%f %d", &altura, &sexo);
+        
+        if (sexo == 1) { // se for masculino
+            num_alunos++;
+            media_altura_alunos += altura;
+        } else if (sexo == 2) { // se for feminino
+            num_alunas++;
+            media_altura_alunas += altura;
+        }
+        
+        i++;
+    }
+
+    media_altura_alunos /= num_alunos;
+    media_altura_alunas /= num_alunas;
+
+    printf("Numero de alunos: %d\n", num_alunos);
+    printf("Numero de alunas: %d\n", num_alunas);
+    printf("Media de altura dos alunos: %.2f metros\n", media_altura_alunos);
+    printf("Media de altura das alunas: %.2f metros\n", media_altura_alunas);
+
+    return 0;
 }
