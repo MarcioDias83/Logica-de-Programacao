@@ -21,5 +21,5 @@ int main()
 	scanf("%f",&Nota4);
 	Soma= Nota1 + Nota2 + Nota3 + Nota4;
 	Media= Soma / 4;
-	printf("Sua média é %.2f.",Media);
+	printf("Sua mÃ©dia foi: %.2f\n",Media);
 }
