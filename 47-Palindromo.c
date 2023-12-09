@@ -5,7 +5,7 @@
 
 #include <locale.h>
 
-/* Crie um código C que receba uma frase e um caractere, e retorne o número de vezes que esse caractere aparece na string. */
+/* Crie um cï¿½digo C que receba uma frase e um caractere, e retorne o nï¿½mero de vezes que esse caractere aparece na string. */
 
 int main()
 {
@@ -15,9 +15,9 @@ int main()
 	char frase1[20]="", frase2[20]="", iguais, letra;//Nunca esquecer de inicializar a string!
 	int x=0, tamanho=0, y=0;
 
-	printf("Qual é a sua frase?\n");
+	printf("Qual ï¿½ a sua frase?\n");
 	gets(frase1);
-	printf("Qual é a letra que você deseja verificar?\n");
+	printf("Qual ï¿½ a letra que vocï¿½ deseja verificar?\n");
 	scanf("&c",&letra);
 	
 	tamanho = strlen(frase1);
@@ -35,6 +35,6 @@ int main()
 	}
 	else
 	{
-		printf("Não é palindromo");
+		printf("NÃ£o e palindromo");
 	}
 }
